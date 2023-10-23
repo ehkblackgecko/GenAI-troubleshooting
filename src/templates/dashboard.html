@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <h1>Top 10 Stock Movers</h1>
+  <table>
+    <tr>
+      <th>Symbol</th>
+      <th>Price</th>
+      <th>Change</th>
+    </tr>
+    <% topMovers.forEach(function(stock) { %>
+      <tr>
+        <td><%= stock.symbol %></td> <!-- Update to lowercase 'symbol' -->
+        <td>$<%= stock.Price.toFixed(2) %></td>
+        <td><%= stock.Change %></td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html>
+
+
